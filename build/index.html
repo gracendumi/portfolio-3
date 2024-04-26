@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/build/css/style.css">
     <style>
         body{
-            background-image: url(/img/sth.jpg);
+            background-image: url(/img/flowers3.jpg);
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;
+            background-size: cover;
             min-height: 100vh;
             margin: 10px;
             padding: 2rem; 
@@ -38,6 +38,24 @@
         .slideinleft{
             animation: slideinleft 1s ease 0s 1 normal forwards;
         }
+        .transition{
+            /* font-size: 1.5rem; */
+            color: brown;
+            /* background-color:hsla(216, 68%, 29%, 0.546) ; */
+            border: 0px solid hsla(216, 67%, 25%, 0.817);
+            /* padding: 0.5rem; */
+            
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+            text-decoration: underline;
+        }
+        .transition:hover{
+            transform: translateY(10px) ;
+            background-color: hsla(0, 0%, 96%, 0.311);
+            color: black;
+        }
         
 
     </style>
@@ -46,14 +64,14 @@
 <body>
     <div class="background">
         <header class="flex justify-center">
-            <article class="bg-gray-300">
+            <article>
                 <h1 class="text-5xl animate-bounce">Welcome to My Portfolio</h1>
                 <br>
                 <nav>
                     <ul class="border-2 border-gray-950">
-                        <li class="border-b-2 border-gray-950 hover:bg-slate-400"><a href="#projects">Projects</a></li>
-                        <li class="border-b-2 border-gray-950 hover:bg-slate-400"><a href="#about">About Me</a></li>
-                        <li class="hover:bg-slate-400"><a href="#contact">Contact Me</a></li>
+                        <li class="border-b-2 border-gray-950 hover:bg-slate-400  active:bg-red-500 text-center"><a href="#projects">Projects</a></li>
+                        <li class="border-b-2 border-gray-950 hover:bg-slate-400  active:bg-red-500 text-center"><a href="#about">About Me</a></li>
+                        <li class="hover:bg-slate-400  active:bg-red-500 text-center"><a href="#contact">Contact Me</a></li>
                     </ul>
                 </nav>
             </article>
@@ -68,14 +86,14 @@
                 <p class="pt-2">I'm Grace Ndumi and I love creating things with code. I started learning programming actually two weeks ago in the Directed Bootcamp and got hooked on the process of building cool stuff from scratch.Another thing that I love doing is dancing and watching mostly anime especially <i>One Piece</i>. The picture beside this text is an image of the main character Luffy. He has set a goal in which he wants to achieve or rather maybe he already has and so he endures all kinds of challenges in order to achieve his goal. Even though he might be a fictional character something in my mind tells me that if he can achieve his goals then I can also master all the codes and get better in web dev and maybe next time design a better website than this one. In addition to that one of my hobbies including listening to some podcasts especially the Jumpers Jump podcast because I really love ghost stories and  conspiracy theories and it's also relaxing. </p>
                 <div class="clear-both"></div>
                 <br><hr><br>
-                <h3 style="text-align: center;">Education</h3>
+                <h3 style="text-align: center;" class="font-semibold text-3xl">Education</h3>
                 <p>I studied at Alliance Girl's High school and I am truly grateful because it gave me this opportunity to take part in this bootcamp which will open great opportunities for me if I manage to work hard and especially smart in studying. </p>
                 <h4>Why programming?</h4>
                 <p>I'm passionate about technology and thrive on the continuous learning opportunities it provides. The field of programming is always evolving, and I'm excited to stay at the forefront of innovation by constantly learning and improving my skills and I also think it's cool and awesome being able to code and do programming.</p>
             </section>
 
             <section id="projects">
-                <h2 style="text-align: center;" class="animate-pulse text-3xl">Projects</h2>
+                <h2 style="text-align: center;" class="animate-pulse text-3xl font-semibold">Projects</h2>
                 <p style="text-align: center;">I've only done two miniprojects.</p>
                 <div class="flex">
                     <div class="flex-1 border-r border-gray-950 pr-8">
@@ -83,12 +101,12 @@
                         <p>The Savory Haven Bistro this is a combination of two projects one html and refined it with css. So it's a restaurant which offers a captivating online experience, providing visitors with insights into the restaurant's ambiance, menu highlights and reservation options.Through an intuitive interface, users can explore the bistro's story, discover its culinary offerings and easily make reservations, all whle immersing themselves in the warmth and hospitality that define the Savory Haven experience.</p>
                         <p>The Technologies I used here are HTML and CSS.</p>
                         <p>Below is the github repository</p>
-                        <a href="https://github.com/gracendumi/My-Savory-Haven-Bistro" target="_blank">Savory Haven Bistro</a>
+                        <a href="https://github.com/gracendumi/My-Savory-Haven-Bistro" target="_blank" class="transition">Savory Haven Bistro</a>
                     </div>
                     <div class="flex-1 pl-8">
                         <h4>Acme rockets</h4>
                         <p>This project basically advertises a company, Acme rockets which builds rockets for space invasion and the technology used here was HTML and purely styled with tailwind. </p>
-                        <p>You can find the link to the repo <a href="https://github.com/gracendumi/Acme-rockets" target="_blank">here</a></p>
+                        <p>You can find the link to the repo <a href="https://github.com/gracendumi/Acme-rockets" target="_blank" class="transition">here</a></p>
                     </div>
                 </div>
 
@@ -110,10 +128,27 @@
             </section>
 
         </main>
-        <footer>
-            <p>Below is a link to my instagram account.</p>
-            <a href=""></a>
+        <footer class="text-center mt-8">
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold">Connect with Me</h3>
+                <ul class="flex justify-center space-x-4">
+                    <li>
+                        <a href="https://www.instagram.com/_ndumi_/" target="_blank" class="hover:text-blue-900 text-yellow-900 font-medium" class="transition">
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold">Contact Me</h3>
+                <p class="mt-2">
+                    Email:<a href="ndumigrace71@gmail.com" class="transition">ndumigrace71@gmail.com</a><br>
+                    Phone: +254702197273
+                </p>
+            </div>
         </footer>
+        <a href="#" class="transition">Back To Top</a>
+        
     </div>
     
 </body>
